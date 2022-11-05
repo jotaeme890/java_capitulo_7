@@ -20,9 +20,9 @@ public class Ejercicio1 {
         num [8] = 5;
         num [9] = 120;
 
-        for(int i = 1; i <= 12 ; i++){
+        for(int i = 1; i < 12 ; i++){
             System.out.println(num[i-1]);
-            System.out.println("Los valores no añadidos salen con el valor 0.");
         }
+        System.out.println("Los valores no añadidos salen con el valor 0");
     }
 }
