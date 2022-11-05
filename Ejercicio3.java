@@ -18,11 +18,11 @@ public class Ejercicio3 {
             System.out.print("Dime un número: ");
             num [i] = sc.nextInt();
         }
-        
+
         System.out.println("Ese array al revés sería: ");
         for(int i =9 ; i>=0 ; i--){
             System.out.print(num[i] + " ");
         }
-        
+        sc.close();
     }
 }
