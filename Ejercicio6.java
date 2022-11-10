@@ -13,15 +13,15 @@ import java.util.Scanner;
 public class Ejercicio6 {
     public static void main(String[] args) {
         Scanner sc = new Scanner (System.in);
-        int [] num = new int [10];
+        int [] num = new int [15];
 
-        for(int i = 0; i <10 ; i++){
+        for(int i = 0; i <15 ; i++){
             System.out.print("Dime un número para el array: ");
             num [i] = sc.nextInt();
         }
 
-        System.out.println(num[9]);
-        for(int i = 0; i <9 ; i++){ //Para leer los números siguientes y hacer que salgan en ese orden
+        System.out.println(num[14]);
+        for(int i = 0; i <14 ; i++){ //Para leer los números siguientes y hacer que salgan en ese orden
             System.out.println(num[i]);
         }
         sc.close();
