@@ -21,7 +21,7 @@ public class Ejercicio6 {
         }
 
         System.out.println(num[9]);
-        for(int i = 0; i <9 ; i++){
+        for(int i = 0; i <9 ; i++){ //Para leer los números siguientes y hacer que salgan en ese orden
             System.out.println(num[i]);
         }
         sc.close();
