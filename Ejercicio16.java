@@ -37,7 +37,7 @@ public class Ejercicio16 {
             }
             for(int i = 0; i<20;i++){ 
                 if(num[i]==mul5){
-                    System.out.print("["+num[i]+"]");
+                    System.out.print("["+num[i]+"] ");
                 } else{
                     System.out.print(num[i] + " ");
                 }
@@ -52,7 +52,7 @@ public class Ejercicio16 {
             }
             for(int i = 0; i<20;i++){
                 if(num[i]==mul7){
-                    System.out.print("["+num[i]+"]");
+                    System.out.print("["+num[i]+"] ");
                 } else{
                     System.out.print(num[i] + " ");
                 }
