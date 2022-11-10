@@ -45,7 +45,7 @@ public class Ejercicio16 {
             break;
 
             case 2:
-            for(int i = 0; i<20;i++){ //comprobamos número a número del array cuál es mayor, y lo guardamos en mínimo para su posterior uso
+            for(int i = 0; i<20;i++){
                 if(num[i]%7==0){
                     mul7 = num[i];
                 } 
