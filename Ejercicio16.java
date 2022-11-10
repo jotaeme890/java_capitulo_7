@@ -14,8 +14,6 @@ public class Ejercicio16 {
     public static void main(String[] args) {
         Scanner sc = new Scanner (System.in);
         int [] num = new int [20];
-        int mul5 = 0;
-        int mul7 = 0;
 
         for(int i = 0; i <20 ; i++){
             num [i] = (int)(Math.random()*401);
@@ -32,11 +30,6 @@ public class Ejercicio16 {
             case 1:
             for(int i = 0; i<20;i++){
                 if(num[i]%5==0){
-                    mul5 = num[i];
-                } 
-            }
-            for(int i = 0; i<20;i++){ 
-                if(num[i]==mul5){
                     System.out.print("["+num[i]+"] ");
                 } else{
                     System.out.print(num[i] + " ");
@@ -47,14 +40,9 @@ public class Ejercicio16 {
             case 2:
             for(int i = 0; i<20;i++){
                 if(num[i]%7==0){
-                    mul7 = num[i];
-                } 
-            }
-            for(int i = 0; i<20;i++){
-                if(num[i]==mul7){
                     System.out.print("["+num[i]+"] ");
                 } else{
-                    System.out.print(num[i] + " ");
+                System.out.print(num[i] + " ");
                 }
             }
             break;
