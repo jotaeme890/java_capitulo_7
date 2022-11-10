@@ -30,7 +30,7 @@ public class Ejercicio16 {
 
         switch (eleccion) {
             case 1:
-            for(int i = 0; i<20;i++){ //comprobamos número a número del array cuál es menor, y lo guardamos en mínimo para su posterior uso
+            for(int i = 0; i<20;i++){
                 if(num[i]%5==0){
                     mul5 = num[i];
                 } 
