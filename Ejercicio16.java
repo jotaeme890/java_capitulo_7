@@ -23,8 +23,8 @@ public class Ejercicio16 {
         }
         
         System.out.println("");
-        System.out.println("1) Múltiplo 5");
-        System.out.println("2) Múltiplo 7");
+        System.out.println("1) Múltiplos 5");
+        System.out.println("2) Múltiplos 7");
         System.out.print("Que dato quieres sacar: ");
         int eleccion = sc.nextInt();
 
