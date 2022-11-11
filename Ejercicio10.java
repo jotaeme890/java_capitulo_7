@@ -13,22 +13,50 @@
 public class Ejercicio10 {
     public static void main(String[] args) {
         int [] numeros = new int [20];
+        int contpares= 0;
+        int contimpares = 0;
 
         for(int i = 0; i<20;i++){
             numeros [i] = (int)(Math.random()*101);
             System.out.print(numeros[i] + " ");
+            if(numeros[i]%2==0){
+                contpares++;
+            } else{
+                contimpares++;
+            }
         }
+        int [] pares = new int [contpares];
+        int [] impares = new int [contimpares];
+
+        int contpares2=0;
+        int contimpares2=0;
+        for(int i = 0; i<20;i++){
+            if(numeros[i]%2==0){
+                pares[contpares2] = numeros[i];
+                contpares2++;
+            } else{
+                impares[contimpares2] = numeros[i];
+                contimpares2++;
+            }
+        }
+        
+        int contpares3=0;
+        int contimpares3=0;
+        for(int i = 0; i<20;i++){
+            if(i<contpares){
+                numeros[i] = pares[contpares3];
+                contpares3++;
+            } else{
+                numeros[i] = impares[contimpares3];
+                contimpares3++;
+            }
+
+        }
+
         System.out.println("");
         System.out.println("Después del cambio quedaría: ");
-        for(int i = 0; i<20;i++){ //Ponemos los pares
-            if(numeros[i]%2==0){
-                System.out.print(numeros[i] +" ");
-            }
-        }
-        for(int i = 0; i<20;i++){ //Impares
-            if(numeros[i]%2!=0){
-                System.out.print(numeros[i] + " ");
-            }
+        for(int i = 0; i<20;i++){
+        System.out.print(numeros[i] + " ");
         }
     }
 }
