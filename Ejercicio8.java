@@ -23,7 +23,7 @@ public class Ejercicio8 {
         }
 
         for(int i = 0; i<12;i++){ //sabiendo que hay 12 meses, los ponemos y justo después le damos el valor de la temperatura a un carácter para ponerlo por pantalla las veces que sea temperatura 
-            System.out.print(meses[i] + " ->");
+            System.out.printf("%-10s -> %2s",meses[i]," ");
             for(int b = 1; b<=temperatura[i] ;b++){
                 System.out.print(" [] ");
             }
