@@ -14,51 +14,64 @@ import java.util.Scanner;
 public class Ejercicio11 {
     public static void main(String[] args) {
         Scanner sc = new Scanner (System.in);
-        int [] num = new int [10];
-        boolean primo = false;
-
-        for(int i = 0; i <10 ; i++){
+        int[] n = new int[10];
+        int[] primo = new int[10];
+        int[] noPrimo = new int[10];
+        int i;
+        int b;
+        int primos = 0;
+        int noPrimos = 0;
+        boolean esPrimo = false;
+        
+        for (i = 0; i < 10; i++) {
             System.out.print("Dime un número para el array: ");
-            num [i] = sc.nextInt();
-        }
-        System.out.println();
-        System.out.println("El array inicial sería: ");
-        System.out.printf("índice    0      1      2      3      4      5      6      7      8      9 \n");
-        System.out.print("Valor ");
-        for(int i = 0; i <10 ; i++){
-            System.out.printf("%6s " , num[i]);
-        }
-
-        System.out.println();
-        System.out.println("El array cambiado sería: ");
-        System.out.printf("índice    0      1      2      3      4      5      6      7      8      9 \n");
-        System.out.print("Valor ");
-
-        for(int i = 0; i <10 ; i++){
-            primo = true;
-            for(int b = 2; b < num[i] ; b++){
-                if(num[i]%b == 0){
-                    primo = false;
+            n[i] = sc.nextInt();
+            esPrimo = true;
+            for (b = 2; b < n[i] - 1; b++) { //Vemos si es un número primo
+                if (n[i] % b == 0) {
+                esPrimo = false;
                 }
             }
-            if(primo){
-                System.out.printf("%6s ", num[i]);
-            } 
-        }
-
-        for(int i = 0; i <10 ; i++){
-            primo = true;
-            for(int b = 2; b < num[i] ; b++){
-                if(num[i]%b == 0){
-                    primo = false;
-                }
-            }
-            if(!primo){
-                System.out.printf("%6s ", num[i]);
+            if (esPrimo) { //Si es primo añadimos dicho número del array n con índice i, al array primo en la posición, inicial 0 pero va incrementando y al igual con el else
+                primo[primos++] = n[i];
+            } else {
+                noPrimo[noPrimos++] = n[i];
             }
         }
+        
+        System.out.println("\n\nArray original:"); //Creamos la tabla original
+        System.out.print(" Índice ");
+        for (i = 0; i < 10; i++) {
+            System.out.printf("%4d ", i);
+        }
+
+        System.out.println("");
+        System.out.print(" Valor  ");
+
+        for (i = 0; i < 10; i++) {
+            System.out.printf("%4d ", n[i]);
+        }
+
+        for (i = 0; i < primos; i++) { //Añadimos al array n con el índice dado por el bucle hasta que llegue a su máximo, lo que hicimos antes era una especie de contador
+            n[i] = primo[i];
+        }
+        
+        for (i = primos; i < primos + noPrimos; i++) { //Hacemos lo mismo que en el anteriorpero, en este caso hacemos la suma para abarcar todo el array y la resta es para saber los espacios libres que nos quedan para acabar el array
+            n[i] = noPrimo[i - primos];
+        }
 
 
-        sc.close();
+        System.out.println("\n\nArray con los primos al principio:");
+        System.out.print(" Índice ");
+
+        for (i = 0; i < 10; i++) {
+            System.out.printf("%4d ", i);
+        }
+        System.out.println("");
+        System.out.print(" Valor  ");
+
+        for (i = 0; i < 10; i++) {
+            System.out.printf("%4d ", n[i]);
+        }
     }
 }
