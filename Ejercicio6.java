@@ -13,19 +13,19 @@ import java.util.Scanner;
 public class Ejercicio6 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n[]=new int[15];
+        int numeros[]=new int[15];
         int aux;
         for(int i=0;i<15;i++){
             System.out.print("Dime un números en el array: ");
-            n[i]=sc.nextInt();
+            numeros[i]=sc.nextInt();
         }
-        aux=n[14];
+        aux=numeros[14];
         for(int i=13;i>=0;i--){
-            n[i+1]=n[i];
+            numeros[i+1]=numeros[i];
         }
-        n[0]=aux;
+        numeros[0]=aux;
         for(int i=0;i<15;i++){
-            System.out.print(n[i]+" ");;
+            System.out.print(numeros[i]+" ");;
         }
         sc.close();
     }
