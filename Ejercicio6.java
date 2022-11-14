@@ -12,17 +12,20 @@ import java.util.Scanner;
 
 public class Ejercicio6 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner (System.in);
-        int [] num = new int [15];
-
-        for(int i = 0; i <15 ; i++){
-            System.out.print("Dime un número para el array: ");
-            num [i] = sc.nextInt();
+        Scanner sc = new Scanner(System.in);
+        int n[]=new int[15];
+        int aux;
+        for(int i=0;i<15;i++){
+            System.out.print("Dime un números en el array: ");
+            n[i]=sc.nextInt();
         }
-
-        System.out.println(num[14]);
-        for(int i = 0; i <14 ; i++){ //Para leer los números siguientes y hacer que salgan en ese orden
-            System.out.println(num[i]);
+        aux=n[14];
+        for(int i=13;i>=0;i--){
+            n[i+1]=n[i];
+        }
+        n[0]=aux;
+        for(int i=0;i<15;i++){
+            System.out.print(n[i]+" ");;
         }
         sc.close();
     }
