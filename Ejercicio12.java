@@ -18,7 +18,6 @@ public class Ejercicio12 {
         int [] num = new int [10];
         int auxinicio = 0;
         int auxfinal = 0;
-        int aux = 0;
 
         for(int i = 0; i <10 ; i++){ //Creamos el array con los valores que nos dan
             System.out.print("Dime un número para el array: ");
