@@ -19,7 +19,6 @@ public class Ejercicio19 {
         int [] numeros = new int [12];
         int posicionPedido = 0;
         int numeroPedido = 0;
-        int aux = 0;
 
         System.out.println("El array inicial sería: "); //Mostramos el array sin modificar
         System.out.print("Índice");
