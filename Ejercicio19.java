@@ -38,9 +38,10 @@ public class Ejercicio19 {
 
         System.out.print("Dime el número que quieres ingresar: ");
         numeroPedido = sc.nextInt();
-        System.out.print("Dime la posición en la que lo quieres ingresar (0-11): ");
-        posicionPedido = sc.nextInt();
-
+        do {
+            System.out.print("Dime la posición en la que lo quieres ingresar (0-11): ");
+            posicionPedido = sc.nextInt();
+        } while (posicionPedido<0 || posicionPedido>11);
 
         for(int i = numeros.length-1 ;i>posicionPedido;i--){ //Rotamos hacia la derecha desde la posicion que nos han pedido hasta la última posición del array
             numeros[i] = numeros[i-1];
