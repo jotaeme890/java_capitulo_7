@@ -41,11 +41,11 @@ public class Ejercicio17 {
 
         
         do { 
-            aux = numeros [19];
+            aux = numeros [19]; //Guardamos el último valor para no perderlo
             for(int i = numeros.length-1 ; i>0 ; i--){ //Vamos a rotar el array
                 numeros[i] = numeros[i-1];
             }
-            numeros [0] = aux;
+            numeros [0] = aux; //Cambiamos el primer número por el último, ya que saldría 2 veces repetido el primero
         } while (numeros[0]!=numeroPedido);
 
         for(int i = 0; i<20;i++){
