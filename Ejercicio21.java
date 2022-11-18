@@ -22,8 +22,9 @@ public class Ejercicio21 {
         for(int i = 0; i<15;i++){ //creamos el array
             System.out.print(numeros[i] + " ");;
         }
-        System.out.println();
-        System.out.println("El array se quedaría: ");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("El array cincueriazado sería: ");
         for(int i = 0; i<15;i++){
             if(numeros[i]%5==0){
                 System.out.print(numeros[i] + " ");
