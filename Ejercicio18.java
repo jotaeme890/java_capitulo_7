@@ -15,9 +15,9 @@
 public class Ejercicio18 {
     public static void main(String[] args) {
         int [] numeros = new int [10];
-        int aux = 0;
-        int aux2 = 0;
-
+        int contmenor = 0;
+        int contmayor = 0;
+        
         System.out.println("El array inicial sería: "); //Mostramos el array sin modificar
         System.out.print("Índice");
         for(int i = 0; i <10 ; i++){
@@ -32,25 +32,51 @@ public class Ejercicio18 {
             System.out.printf("%7s" , numeros[i]);
         }
 
-        for(int i = numeros.length-1;i>0;i--){ //MAL, NO VEO LO QUE TIENE QUE HACER EL ARRAY
-            aux2 = numeros[9];
-            if(numeros[i] <100){
-                aux = numeros[i];
+        System.out.println("");
+        for(int i = 0;i<10;i++){ //Vemos cuantos números hay mayores y menores a 100
+            if(numeros[i]<100){
+                contmenor++;
+            }else{
+                contmayor++;
             }
-            numeros[i] = numeros[i-1];
-            numeros[0] = aux;
+        }
+
+        int contmayores=0; //Para usarlo de índice en el array de mayores
+        int contmenores=0; //Para usarlo de índice en el array de menores
+
+        int [] menores = new int [contmenor]; //Crearemos los arrays
+        int [] mayores = new int [contmayor];
+
+
+        for(int i = 0;i<10;i++){ //Añadimos los valores a los arrays
+            if(numeros[i]<=100){
+                menores[contmenores] = numeros[i];
+                contmenores++;
+            }
+        }
+        for(int i = 0;i<10;i++){ //Añadimos los valores a los arrays
+            if(numeros[i]>100){
+                mayores[contmayores] = numeros[i];
+                contmayores++;
+            }
         }
 
         System.out.println("");
-        System.out.println("El array modificado sería: "); //Mostramos el array
+        System.out.println("El array modificado sería: "); //Mostramos el array array modificado
         System.out.print("Índice");
         for(int i = 0; i <10 ; i++){
             System.out.printf("%7s" , i);
         }
         System.out.println("");
         System.out.print("Valor ");
-        for(int i = 0; i <numeros.length ; i++){
-            System.out.printf("%7s" , numeros[i]);
+        for(int i = 0; i <10 ; i++){
+            if(i<menores.length){
+                System.out.printf("%7s",menores[i]);
+            }
+
+            if(i<mayores.length){
+                System.out.printf("%7s",mayores[i]);
+            }
         }
     }
 }
