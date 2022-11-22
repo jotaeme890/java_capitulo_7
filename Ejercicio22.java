@@ -35,6 +35,5 @@ public class Ejercicio22 {
             System.out.printf("%10d ", num[fila][columna]);
             }
         }
-
     }
 }
