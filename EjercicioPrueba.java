@@ -21,7 +21,7 @@ public class EjercicioPrueba {
 
         for(int i = 0;i<fila;i++){
             for(int j= 0;j<columna;j++){
-                System.out.print(matriz[i][j]);
+                System.out.print(matriz[i][j] + " ");
             }
             System.out.println();
         }
