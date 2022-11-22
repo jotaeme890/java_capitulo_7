@@ -6,12 +6,10 @@ public class EjercicioPrueba3 {
         Scanner sc = new Scanner (System.in);
         System.out.print("Dime un valor: ");
         int fila = sc.nextInt();
-        System.out.print("Dime un valor: ");
-        int columna = sc.nextInt();
-        int [] [] matriz = new int [fila] [columna]; //[i] [j]
+        int [] [] matriz = new int [fila] [fila]; //[i] [j]
 
         for(int i = 0; i<fila ; i++){
-            for(int  j= 0; j<columna;  j++){
+            for(int  j= 0; j<fila;  j++){
                 if(j%2 == 0){
                     matriz[i][j] = 1;
                 } else{
@@ -21,7 +19,7 @@ public class EjercicioPrueba3 {
         }
 
         for(int i = 0;i<fila;i++){
-            for(int j= 0;j<columna;j++){
+            for(int j= 0;j<fila;j++){
                 System.out.print(matriz[i][j] + " ");
             }
             System.out.println();
