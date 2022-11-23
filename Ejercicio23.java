@@ -46,7 +46,7 @@ public class Ejercicio23 {
             for(int i = 0;i<4;i++){
                 sumaj = sumaj + num[i][j];
             }
-            System.out.printf("  %5d",sumaj);
+            System.out.printf("%7d ",sumaj);
         }
 
         for(int i=0 ; i<4 ; i++){ //SUMA TOTAL DE LOS NÚMEROS QUE HAY
@@ -55,7 +55,7 @@ public class Ejercicio23 {
                 sumatot = numero2+sumatot;
             }
         }
-        System.out.printf("%9d",sumatot);
+        System.out.printf("%7d",sumatot);
         sc.close();
     }
 }
