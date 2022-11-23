@@ -30,7 +30,7 @@ public class Ejercicio24 {
                 System.out.printf("%6d |",num [i][j]);
                 sumai = sumai + num [i][j];
             }
-            System.out.printf("%6d\n",sumai);
+            System.out.printf("|%6d\n",sumai);
         }
 
         for (int j = 0;j<5;j++){
