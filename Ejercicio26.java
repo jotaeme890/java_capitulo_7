@@ -23,17 +23,13 @@ public class Ejercicio26 {
         for(int i = 0;i<6;i++){
             for(int j = 0; j<10;j++){
                 num [i][j] = (int)(Math.random()*1001);
-            }
-        }
-
-        for(int i = 0;i<6;i++){
-            for(int j = 0; j<10;j++){
+                
                 if(num[i][j] < minimo){
                     minimo = num[i][j];
                     minimocolumna = j;
                     minimofila = i;
                 }
-
+    
                 if(num[i][j] > maximo){
                     maximo = num[i][j];
                     maximocolumna = j;
