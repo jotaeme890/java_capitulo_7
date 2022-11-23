@@ -33,7 +33,7 @@ public class Ejercicio25 {
                     sumai = sumai + num [i][j];
                     Thread.sleep(100);
                 }
-                System.out.printf("%6d\n",sumai);
+                System.out.printf("|%6d\n",sumai);
                 Thread.sleep(500);
             }
     
