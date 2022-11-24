@@ -23,19 +23,25 @@ public class Ejercicio26 {
         for(int i = 0;i<6;i++){
             for(int j = 0; j<10;j++){
                 num [i][j] = (int)(Math.random()*1001);
-                
+            }
+        }
+        
+        for(int i = 0;i<6;i++){
+            for(int j = 0; j<10;j++){
+                System.out.printf("%5d ", num[i][j]);
                 if(num[i][j] < minimo){
                     minimo = num[i][j];
-                    minimocolumna = j;
                     minimofila = i;
+                    minimocolumna = j;
                 }
     
                 if(num[i][j] > maximo){
                     maximo = num[i][j];
-                    maximocolumna = j;
                     maximofila = i;
+                    maximocolumna = j;
                 }
             }
+            System.out.println("│");
         }
 
         System.out.println("La posicion mínima es " + minimofila + ", " + minimocolumna);
