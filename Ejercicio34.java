@@ -16,8 +16,7 @@ public class Ejercicio34 {
     public static void main(String[] args) {
         int [] [] num = new int [4] [10];
         String [] pais = {"España", "Rusia", "Japón","Australia"};
-        int numero = 0;
-        
+
         System.out.printf("%53sMED MIN MAX\n"," ");
         for (int i = 0; i < 4; i++) {
             System.out.printf("%9s: ",pais[i]);        
