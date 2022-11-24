@@ -22,10 +22,10 @@ public class Ejercicio27 {
         for(int i = 0;i<6;i++){
             for(int j = 0; j<10;j++){
                 do{
-                    num [i][j] = (int)(Math.random()*1001);
-                    repetido = false;
+                    num [i][j] = (int)(Math.random()*1001); //Damos los números al array
+                    repetido = false; //Usaremos el boolean para salir del do-while
 
-                    for (int j2 = 0; j2 < 10*i+j; j2++) {
+                    for (int j2 = 0; j2 < 10*i+j; j2++) { //Vamos a comprobar todos los números del array y si no es igual saldrá del do-while
                         if(num[i][j] == num [j2/10] [j2%10] ){
                             repetido=true;
                         }
