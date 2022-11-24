@@ -14,6 +14,7 @@ public class Ejercicio32 {
         int [] [] num = new int [10][10];
         int min = 301;
         int max = 200;
+        int suma = 0;
 
         for (int i = 0; i < num.length; i++) {
             for (int j = 0; j < num.length; j++) {
@@ -23,9 +24,11 @@ public class Ejercicio32 {
                     System.out.printf("%5d",num[i][j]);
 
                     if(num[i][j] < min){
+                        suma += num[i][j];
                         min = num[i][j];
                     }
                     if(num[i][j] > max){
+                        suma += num[i][j];
                         max = num[i][j];
                     }
                 } else{
@@ -39,5 +42,6 @@ public class Ejercicio32 {
         System.out.println();
         System.out.println("El mínimo es: " + min);
         System.out.println("El máximo es: " + max);
+        System.out.println("La media es: " + (suma/9));
     }
 }
