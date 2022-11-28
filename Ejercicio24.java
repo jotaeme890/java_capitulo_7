@@ -19,7 +19,7 @@ public class Ejercicio24 {
 
         for (int i = 0;i<4;i++){ //Creamos el array e introducimos los números en 
             for (int j = 0;j<5;j++){
-                numero = (int)(Math.random()*800+100);
+                numero = (int)(Math.random()*(900)+100);
                 num [i][j] = numero;
             }
         }
